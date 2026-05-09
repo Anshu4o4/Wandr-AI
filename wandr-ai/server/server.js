@@ -62,9 +62,7 @@ const app = express();
 
 // Set security HTTP headers
 app.use(helmet({
-  crossOriginOpenerPolicy: process.env.NODE_ENV === 'production'
-    ? { policy: 'same-origin' }
-    : { policy: 'same-origin-allow-popups' },
+  crossOriginOpenerPolicy: { policy: 'same-origin-allow-popups' },
 }));
 
 // Logging middleware
