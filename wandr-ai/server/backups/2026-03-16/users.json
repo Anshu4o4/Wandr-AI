@@ -1,0 +1,242 @@
+[
+  {
+    "_id": "69b7ff9021215b4133d1eedb",
+    "name": "Admin User",
+    "email": "admin@wandr.com",
+    "password": "$2a$12$50.kJ6V0WeSCZCm38hgOlOPQo713zJ4kCf2UdA4ptA4mC1cJ9gLo.",
+    "avatar": "https://res.cloudinary.com/demo/image/upload/v1582200201/avatar.png",
+    "role": "admin",
+    "savedTrips": [],
+    "isVerified": true,
+    "createdAt": "2026-03-16T13:03:12.200Z",
+    "updatedAt": "2026-03-16T13:03:12.200Z",
+    "__v": 0
+  },
+  {
+    "_id": "69b7ff9021215b4133d1eedc",
+    "name": "Test User",
+    "email": "user@wandr.com",
+    "password": "$2a$12$Vqqs0MxMrEebhwlQrrWzEOkcMzOTnHigZVFn/1V5cTwAnzKOOZzJG",
+    "avatar": "https://res.cloudinary.com/demo/image/upload/v1582200201/avatar.png",
+    "role": "user",
+    "savedTrips": [],
+    "isVerified": true,
+    "createdAt": "2026-03-16T13:03:12.201Z",
+    "updatedAt": "2026-03-16T13:03:12.201Z",
+    "__v": 0
+  },
+  {
+    "_id": "69b80349b6451614b1cc68ae",
+    "name": "anshu",
+    "email": "anshu@gmail.com",
+    "password": "$2a$12$WnsQIwIY/QKxv1eggq6/EeCHz8sQCO4BqE9jVVHNHum1uDOZEujEK",
+    "avatar": "https://res.cloudinary.com/demo/image/upload/v1582200201/avatar.png",
+    "role": "user",
+    "savedTrips": [],
+    "isVerified": false,
+    "createdAt": "2026-03-16T13:19:05.580Z",
+    "updatedAt": "2026-03-16T13:19:05.580Z",
+    "__v": 0
+  },
+  {
+    "_id": "69b84227511b5a1ee31865d1",
+    "name": "Test User",
+    "email": "test@example.com",
+    "password": "$2a$12$f6OhM7hG75TWcPc47iore.1dtagIReT/oTkU62JKDqB2d9iRgMoSy",
+    "avatar": "https://res.cloudinary.com/demo/image/upload/v1582200201/avatar.png",
+    "role": "user",
+    "savedTrips": [],
+    "savedItineraries": [],
+    "isVerified": false,
+    "createdAt": "2026-03-16T17:47:19.055Z",
+    "updatedAt": "2026-03-16T17:47:19.055Z",
+    "__v": 0
+  },
+  {
+    "_id": "69b847a96c8070900052cf81",
+    "name": "New User",
+    "email": "newuser@wandr.com",
+    "password": "$2a$12$zm0WOIZqwPTJjxWAgY.szeGN8dcGe/wTJu3cvX5dfgJDr5kibZCSe",
+    "avatar": "https://res.cloudinary.com/demo/image/upload/v1582200201/avatar.png",
+    "role": "user",
+    "savedTrips": [],
+    "savedItineraries": [
+      {
+        "title": "Magical 3-Day Journey through tokyo",
+        "description": "A perfectly balanced adventure in tokyo, tailored for 1 traveler(s) with a focus on Culture, Nightlife.",
+        "destination": "tokyo",
+        "duration": 3,
+        "estimatedCost": "$600 - $1,000",
+        "itinerary": [
+          {
+            "day": 1,
+            "title": "Arrival & Orientation",
+            "theme": "Cultural Immersion",
+            "activities": [
+              {
+                "time": "09:00 AM",
+                "activity": "Local Exploration & Landmarks",
+                "location": "Central tokyo",
+                "activityType": "Sightseeing",
+                "estimatedCost": "$20",
+                "tips": "Book tickets in advance to skip the line."
+              },
+              {
+                "time": "01:00 PM",
+                "activity": "Authentic Local Lunch",
+                "location": "Old Town District",
+                "activityType": "Dining",
+                "estimatedCost": "$30",
+                "tips": "Try the specialty dish recommended by the waiter."
+              },
+              {
+                "time": "04:00 PM",
+                "activity": "Guided Walking Tour",
+                "location": "Riverside / Main Square",
+                "activityType": "Culture",
+                "estimatedCost": "Free",
+                "tips": "Wear comfortable walking shoes."
+              }
+            ],
+            "accommodation": {
+              "name": "tokyo Boutique Hotel",
+              "accommodationType": "Boutique",
+              "pricePerNight": "$150"
+            },
+            "meals": [
+              {
+                "time": "Breakfast",
+                "name": "Hotel Buffet",
+                "cuisine": "International",
+                "priceRange": "Included"
+              },
+              {
+                "time": "Dinner",
+                "name": "Sunset Bistro",
+                "cuisine": "Local Fusion",
+                "priceRange": "$$"
+              }
+            ]
+          },
+          {
+            "day": 2,
+            "title": "Exploring the Heart of tokyo",
+            "theme": "Adventure & Nature",
+            "activities": [
+              {
+                "time": "09:00 AM",
+                "activity": "Local Exploration & Landmarks",
+                "location": "Central tokyo",
+                "activityType": "Sightseeing",
+                "estimatedCost": "$20",
+                "tips": "Book tickets in advance to skip the line."
+              },
+              {
+                "time": "01:00 PM",
+                "activity": "Authentic Local Lunch",
+                "location": "Old Town District",
+                "activityType": "Dining",
+                "estimatedCost": "$30",
+                "tips": "Try the specialty dish recommended by the waiter."
+              },
+              {
+                "time": "04:00 PM",
+                "activity": "Guided Walking Tour",
+                "location": "Riverside / Main Square",
+                "activityType": "Culture",
+                "estimatedCost": "Free",
+                "tips": "Wear comfortable walking shoes."
+              }
+            ],
+            "accommodation": {
+              "name": "tokyo Boutique Hotel",
+              "accommodationType": "Boutique",
+              "pricePerNight": "$150"
+            },
+            "meals": [
+              {
+                "time": "Breakfast",
+                "name": "Hotel Buffet",
+                "cuisine": "International",
+                "priceRange": "Included"
+              },
+              {
+                "time": "Dinner",
+                "name": "Sunset Bistro",
+                "cuisine": "Local Fusion",
+                "priceRange": "$$"
+              }
+            ]
+          },
+          {
+            "day": 3,
+            "title": "Lasting Memories & Departure",
+            "theme": "Cultural Immersion",
+            "activities": [
+              {
+                "time": "09:00 AM",
+                "activity": "Local Exploration & Landmarks",
+                "location": "Central tokyo",
+                "activityType": "Sightseeing",
+                "estimatedCost": "$20",
+                "tips": "Book tickets in advance to skip the line."
+              },
+              {
+                "time": "01:00 PM",
+                "activity": "Authentic Local Lunch",
+                "location": "Old Town District",
+                "activityType": "Dining",
+                "estimatedCost": "$30",
+                "tips": "Try the specialty dish recommended by the waiter."
+              },
+              {
+                "time": "04:00 PM",
+                "activity": "Guided Walking Tour",
+                "location": "Riverside / Main Square",
+                "activityType": "Culture",
+                "estimatedCost": "Free",
+                "tips": "Wear comfortable walking shoes."
+              }
+            ],
+            "accommodation": {
+              "name": "tokyo Boutique Hotel",
+              "accommodationType": "Boutique",
+              "pricePerNight": "$150"
+            },
+            "meals": [
+              {
+                "time": "Breakfast",
+                "name": "Hotel Buffet",
+                "cuisine": "International",
+                "priceRange": "Included"
+              },
+              {
+                "time": "Dinner",
+                "name": "Sunset Bistro",
+                "cuisine": "Local Fusion",
+                "priceRange": "$$"
+              }
+            ]
+          }
+        ],
+        "packingList": [
+          "Comfortable walking shoes",
+          "Power adapter",
+          "Reusable water bottle",
+          "Local currency",
+          "Travel insurance documents"
+        ],
+        "localTips": [
+          "Learn a few basic phrases in the local language.",
+          "Use public transport; it is safe and reliable.",
+          "Tipping is appreciated but not mandatory.",
+          "Always carry a light jacket, even in summer."
+        ]
+      }
+    ],
+    "isVerified": false,
+    "createdAt": "2026-03-16T18:10:49.566Z",
+    "updatedAt": "2026-03-16T18:38:04.577Z",
+    "__v": 1
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "name": "traveler-workspace",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix ./wandr-ai run dev",
+    "install-all": "npm --prefix ./wandr-ai run install-all",
+    "dev:client": "npm --prefix ./wandr-ai run dev:client",
+    "dev:server": "npm --prefix ./wandr-ai run dev:server"
+  }
+}

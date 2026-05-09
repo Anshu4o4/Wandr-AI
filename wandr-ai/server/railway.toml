@@ -1,0 +1,4 @@
+[[cronjobs]]
+name = "daily-backup"
+schedule = "0 2 * * *"
+command = "npm run backup"
