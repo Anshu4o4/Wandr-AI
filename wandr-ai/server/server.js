@@ -62,8 +62,8 @@ const app = express();
 
 // Set security HTTP headers
 app.use(helmet({
-  crossOriginOpenerPolicy: false, // Disabled to support Google OAuth postMessage
-  crossOriginEmbedderPolicy: false, // Related COOP enforcement
+  crossOriginOpenerPolicy: { policy: 'same-origin-allow-popups' },
+  crossOriginEmbedderPolicy: false,
   contentSecurityPolicy: {
     directives: {
       defaultSrc: ["'self'"],

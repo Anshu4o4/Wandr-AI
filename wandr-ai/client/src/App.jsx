@@ -2,6 +2,7 @@ import { lazy, Suspense, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import { useAuthStore } from './store/authStore';
+import { GOOGLE_CLIENT_ID } from './config/googleOAuth';
 
 // Common Components
 import { Navbar } from './components/common/Navbar';
@@ -60,22 +61,21 @@ function App() {
     }
   }, [refreshToken]);
 
-  return (
-    <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID || process.env.REACT_APP_GOOGLE_CLIENT_ID}>
-      <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
-        <ScrollToTop />
-        <div className="flex flex-col min-h-screen">
-          <a
-            href="#main-content"
-            className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-primary-700 focus:shadow-lg"
-          >
-            Skip to content
-          </a>
-          <Navbar />
-          
-          <main id="main-content" tabIndex={-1} className="flex-grow">
-            <Suspense fallback={<PageLoader />}>
-              <Routes>
+  const app = (
+    <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+      <ScrollToTop />
+      <div className="flex flex-col min-h-screen">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-primary-700 focus:shadow-lg"
+        >
+          Skip to content
+        </a>
+        <Navbar />
+
+        <main id="main-content" tabIndex={-1} className="flex-grow">
+          <Suspense fallback={<PageLoader />}>
+            <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/explore" element={<Explore />} />
               <Route
@@ -87,7 +87,7 @@ function App() {
                 }
               />
               <Route path="/trip/:id" element={<TripDetail />} />
-              
+
               {/* Auth Routes */}
               <Route
                 path="/login"
@@ -105,7 +105,7 @@ function App() {
                   </ProtectedRoute>
                 }
               />
-              
+
               <Route
                 path="/booking"
                 element={
@@ -144,15 +144,20 @@ function App() {
         </main>
 
         <Footer />
-        
+
         {/* Global floating AI chat */}
         <Suspense fallback={null}>
           <AIChatBox />
         </Suspense>
       </div>
     </BrowserRouter>
-    </GoogleOAuthProvider>
   );
+
+  return GOOGLE_CLIENT_ID ? (
+    <GoogleOAuthProvider clientId={GOOGLE_CLIENT_ID}>
+      {app}
+    </GoogleOAuthProvider>
+  ) : app;
 }
 
 export default App;

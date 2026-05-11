@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { GoogleLogin } from '@react-oauth/google';
 import { useAuthStore } from '../store/authStore';
+import { GOOGLE_CLIENT_ID } from '../config/googleOAuth';
 import { Button } from '../components/common/Button';
 import { Input } from '../components/common/Input';
 import { Plane } from 'lucide-react';
@@ -90,33 +91,37 @@ export default function Login() {
             Sign in
           </Button>
 
-          <div className="mt-6 relative">
-            <div className="absolute inset-0 flex items-center" aria-hidden="true">
-              <div className="w-full border-t border-slate-200"></div>
-            </div>
-            <div className="relative flex justify-center text-sm">
-              <span className="px-2 bg-white text-slate-500">Or continue with</span>
-            </div>
-          </div>
+          {GOOGLE_CLIENT_ID && (
+            <>
+              <div className="mt-6 relative">
+                <div className="absolute inset-0 flex items-center" aria-hidden="true">
+                  <div className="w-full border-t border-slate-200"></div>
+                </div>
+                <div className="relative flex justify-center text-sm">
+                  <span className="px-2 bg-white text-slate-500">Or continue with</span>
+                </div>
+              </div>
 
-          <div className="flex justify-center">
-            <GoogleLogin
-              onSuccess={async (credentialResponse) => {
-                clearError();
-                const success = await loginWithGoogle(credentialResponse.credential);
-                if (success) {
-                  navigate(`${from.pathname || '/'}${from.search || ''}`, { replace: true });
-                }
-              }}
-              onError={() => clearError()}
-              useOneTap={false}
-              theme="outline"
-              size="large"
-              width="320"
-              text="signin_with"
-              shape="pill"
-            />
-          </div>
+              <div className="flex justify-center">
+                <GoogleLogin
+                  onSuccess={async (credentialResponse) => {
+                    clearError();
+                    const success = await loginWithGoogle(credentialResponse.credential);
+                    if (success) {
+                      navigate(`${from.pathname || '/'}${from.search || ''}`, { replace: true });
+                    }
+                  }}
+                  onError={() => clearError()}
+                  useOneTap={false}
+                  theme="outline"
+                  size="large"
+                  width="320"
+                  text="signin_with"
+                  shape="pill"
+                />
+              </div>
+            </>
+          )}
 
         </form>
 
